@@ -1,62 +1,58 @@
-# Dev-Kit - Epic-Based Project Bootstrap
+# Dev-Kit Overview
 
-Copy this entire folder into any new project for instant professional structure with epic-based project management.
+A lightweight toolkit for consistent development workflows. Copy into any project for instant professional structure.
 
 ## Quick Start
 
 ```bash
-# 1. Copy dev-kit to your new project
-cp -r dev-kit/ /path/to/new-project/
+# 1. Copy templates to your project
+cp -r templates/* /path/to/your-project/
 
-# 2. Fill out project context (2 minutes)
-vim SETUP.md
+# 2. Use the templates
+cp templates/README-PROJECT.md README.md
+cp templates/pr-template.md .github/pull_request_template.md
 
-# 3. Initialize project structure
-./scripts/init-project.sh "My Project Name"
-
-# 4. Start coding with epic management ready
+# 3. Track your work
+cp templates/daily-update.md today.md
 ```
 
-## What You Get
+## What's Included
 
-### Scripts (Automation)
-- `init-project.sh` - Bootstrap project structure
-- `create-epics.sh` - Generate GitHub epics/issues  
-- `daily-update.sh` - Update progress on GitHub issues
+### templates/
+**Ready-to-use project files:**
+- `README-PROJECT.md` - Professional project documentation
+- `epic-template.md` - Feature planning template
+- `pr-template.md` - Pull request standards
+- `daily-update.md` - Daily progress tracking
 
-### Templates (Copy & Customize)
-- `README-PROJECT.md` - Professional portfolio README
-- `epic-template.md` - Sprint/epic structure
-- `pr-template.md` - Pull request format
-- `daily-update.md` - Progress tracking format
-- `.gitignore` - Essential ignore patterns
-- `.env.example` - Environment variables template
+### scripts/
+**Automation tools** for common tasks (shell scripts)
 
-### Quick Reference (Look Up Fast)
-- `git-guide.md` - Essential commands + conventional commits
-- `learning-resources.md` - Curated learning links
+### reference/
+**Quick lookup guides:**
+- `learning-resources.md` - Curated learning materials
 
 ## Daily Workflow
 
 ```bash
-# Morning: Check current epic
-gh issue view 1
+# Morning: Plan your day
+cp templates/daily-update.md today.md
+vim today.md
 
-# Throughout day: Code...
+# Code with conventional commits
+git commit -m "feat: add user authentication"
+git commit -m "fix: resolve database connection issue"
 
-# End of day: Update progress  
-./scripts/daily-update.sh 1 "3h" "Built auth system, added tests"
+# Create PRs with template
+cp templates/pr-template.md pr-description.md
 ```
 
-## Project Structure After Init
+## How to Use
 
-```
-my-project/
-├── README.md              # Professional portfolio README
-├── .gitignore            # Essential ignore patterns
-├── .env.example          # Environment template
-├── SETUP.md              # Project context for AI agents
-└── dev-kit/              # This folder (keep for reference)
-```
+1. **Starting a Project**: Copy templates you need
+2. **Daily Work**: Use daily-update.md for tracking
+3. **Feature Planning**: Use epic-template.md
+4. **Pull Requests**: Follow pr-template.md
+5. **Documentation**: Start with README-PROJECT.md
 
-Copy, fill SETUP.md, run scripts, start coding. That's it.
+No complex setup. Just markdown templates and simple scripts.
